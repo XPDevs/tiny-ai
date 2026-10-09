@@ -1,0 +1,470 @@
+[
+  {
+    "src": "argentina capital city",
+    "tgt": "buenos",
+    "split": "train",
+    "tags": [
+      "country:argentina",
+      "capital:buenos"
+    ]
+  },
+  {
+    "src": "argentina capital city please",
+    "tgt": "buenos",
+    "split": "train",
+    "tags": [
+      "country:argentina",
+      "capital:buenos"
+    ]
+  },
+  {
+    "src": "australia capital",
+    "tgt": "canberra",
+    "split": "train",
+    "tags": [
+      "country:australia",
+      "capital:canberra"
+    ]
+  },
+  {
+    "src": "australia capital city ?",
+    "tgt": "canberra",
+    "split": "train",
+    "tags": [
+      "country:australia",
+      "capital:canberra"
+    ]
+  },
+  {
+    "src": "belgium capital city ?",
+    "tgt": "brussels",
+    "split": "train",
+    "tags": [
+      "country:belgium",
+      "capital:brussels"
+    ]
+  },
+  {
+    "src": "belgium capital city please",
+    "tgt": "brussels",
+    "split": "train",
+    "tags": [
+      "country:belgium",
+      "capital:brussels"
+    ]
+  },
+  {
+    "src": "belgium capital please",
+    "tgt": "brussels",
+    "split": "train",
+    "tags": [
+      "country:belgium",
+      "capital:brussels"
+    ]
+  },
+  {
+    "src": "brazil capital city please",
+    "tgt": "brasilia",
+    "split": "train",
+    "tags": [
+      "country:brazil",
+      "capital:brasilia"
+    ]
+  },
+  {
+    "src": "capital city of austria",
+    "tgt": "vienna",
+    "split": "train",
+    "tags": [
+      "country:austria",
+      "capital:vienna"
+    ]
+  },
+  {
+    "src": "capital city of austria please",
+    "tgt": "vienna",
+    "split": "train",
+    "tags": [
+      "country:austria",
+      "capital:vienna"
+    ]
+  },
+  {
+    "src": "capital city of belgium please",
+    "tgt": "brussels",
+    "split": "train",
+    "tags": [
+      "country:belgium",
+      "capital:brussels"
+    ]
+  },
+  {
+    "src": "capital city of brazil",
+    "tgt": "brasilia",
+    "split": "train",
+    "tags": [
+      "country:brazil",
+      "capital:brasilia"
+    ]
+  },
+  {
+    "src": "capital city of brazil please",
+    "tgt": "brasilia",
+    "split": "train",
+    "tags": [
+      "country:brazil",
+      "capital:brasilia"
+    ]
+  },
+  {
+    "src": "argentina capital ?",
+    "tgt": "buenos",
+    "split": "val_indist",
+    "tags": [
+      "country:argentina",
+      "capital:buenos"
+    ]
+  },
+  {
+    "src": "brazil capital",
+    "tgt": "brasilia",
+    "split": "val_indist",
+    "tags": [
+      "country:brazil",
+      "capital:brasilia"
+    ]
+  },
+  {
+    "src": "canada capital city ?",
+    "tgt": "ottawa",
+    "split": "val_indist",
+    "tags": [
+      "country:canada",
+      "capital:ottawa"
+    ]
+  },
+  {
+    "src": "canada capital please",
+    "tgt": "ottawa",
+    "split": "val_indist",
+    "tags": [
+      "country:canada",
+      "capital:ottawa"
+    ]
+  },
+  {
+    "src": "capital city of japan ?",
+    "tgt": "tokyo",
+    "split": "val_indist",
+    "tags": [
+      "country:japan",
+      "capital:tokyo"
+    ]
+  },
+  {
+    "src": "capital city of malaysia",
+    "tgt": "kuala",
+    "split": "val_indist",
+    "tags": [
+      "country:malaysia",
+      "capital:kuala"
+    ]
+  },
+  {
+    "src": "capital of denmark",
+    "tgt": "copenhagen",
+    "split": "val_indist",
+    "tags": [
+      "country:denmark",
+      "capital:copenhagen"
+    ]
+  },
+  {
+    "src": "capital of england please",
+    "tgt": "london",
+    "split": "val_indist",
+    "tags": [
+      "country:england",
+      "capital:london"
+    ]
+  },
+  {
+    "src": "capital of hungary please",
+    "tgt": "budapest",
+    "split": "val_indist",
+    "tags": [
+      "country:hungary",
+      "capital:budapest"
+    ]
+  },
+  {
+    "src": "capital of indonesia ?",
+    "tgt": "jakarta",
+    "split": "val_indist",
+    "tags": [
+      "country:indonesia",
+      "capital:jakarta"
+    ]
+  },
+  {
+    "src": "capital of indonesia please",
+    "tgt": "jakarta",
+    "split": "val_indist",
+    "tags": [
+      "country:indonesia",
+      "capital:jakarta"
+    ]
+  },
+  {
+    "src": "china capital ?",
+    "tgt": "beijing",
+    "split": "val_indist",
+    "tags": [
+      "country:china",
+      "capital:beijing"
+    ]
+  },
+  {
+    "src": "china capital please",
+    "tgt": "beijing",
+    "split": "val_indist",
+    "tags": [
+      "country:china",
+      "capital:beijing"
+    ]
+  },
+  {
+    "src": "excuse me argentina capital city",
+    "tgt": "buenos",
+    "split": "val_compositional",
+    "tags": [
+      "country:argentina",
+      "capital:buenos"
+    ]
+  },
+  {
+    "src": "excuse me argentina capital city ?",
+    "tgt": "buenos",
+    "split": "val_compositional",
+    "tags": [
+      "country:argentina",
+      "capital:buenos"
+    ]
+  },
+  {
+    "src": "excuse me australia capital city please",
+    "tgt": "canberra",
+    "split": "val_compositional",
+    "tags": [
+      "country:australia",
+      "capital:canberra"
+    ]
+  },
+  {
+    "src": "excuse me belgium capital city ?",
+    "tgt": "brussels",
+    "split": "val_compositional",
+    "tags": [
+      "country:belgium",
+      "capital:brussels"
+    ]
+  },
+  {
+    "src": "excuse me belgium capital city please",
+    "tgt": "brussels",
+    "split": "val_compositional",
+    "tags": [
+      "country:belgium",
+      "capital:brussels"
+    ]
+  },
+  {
+    "src": "excuse me brazil capital ?",
+    "tgt": "brasilia",
+    "split": "val_compositional",
+    "tags": [
+      "country:brazil",
+      "capital:brasilia"
+    ]
+  },
+  {
+    "src": "excuse me capital city of australia",
+    "tgt": "canberra",
+    "split": "val_compositional",
+    "tags": [
+      "country:australia",
+      "capital:canberra"
+    ]
+  },
+  {
+    "src": "excuse me capital city of brazil",
+    "tgt": "brasilia",
+    "split": "val_compositional",
+    "tags": [
+      "country:brazil",
+      "capital:brasilia"
+    ]
+  },
+  {
+    "src": "excuse me capital city of denmark please",
+    "tgt": "copenhagen",
+    "split": "val_compositional",
+    "tags": [
+      "country:denmark",
+      "capital:copenhagen"
+    ]
+  },
+  {
+    "src": "excuse me capital city of france",
+    "tgt": "paris",
+    "split": "val_compositional",
+    "tags": [
+      "country:france",
+      "capital:paris"
+    ]
+  },
+  {
+    "src": "excuse me capital city of france ?",
+    "tgt": "paris",
+    "split": "val_compositional",
+    "tags": [
+      "country:france",
+      "capital:paris"
+    ]
+  },
+  {
+    "src": "excuse me capital city of india",
+    "tgt": "delhi",
+    "split": "val_compositional",
+    "tags": [
+      "country:india",
+      "capital:delhi"
+    ]
+  },
+  {
+    "src": "excuse me capital city of indonesia",
+    "tgt": "jakarta",
+    "split": "val_compositional",
+    "tags": [
+      "country:indonesia",
+      "capital:jakarta"
+    ]
+  },
+  {
+    "src": "bulgaria capital",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "bulgaria capital ?",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "bulgaria capital city",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "bulgaria capital city ?",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "bulgaria capital city please",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "bulgaria capital please",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "capital city of bulgaria",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "capital city of bulgaria ?",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "capital city of bulgaria please",
+    "tgt": "sofia",
+    "split": "val_systematic",
+    "tags": [
+      "country:bulgaria",
+      "capital:sofia"
+    ]
+  },
+  {
+    "src": "capital city of croatia",
+    "tgt": "zagreb",
+    "split": "val_systematic",
+    "tags": [
+      "country:croatia",
+      "capital:zagreb"
+    ]
+  },
+  {
+    "src": "capital city of croatia ?",
+    "tgt": "zagreb",
+    "split": "val_systematic",
+    "tags": [
+      "country:croatia",
+      "capital:zagreb"
+    ]
+  },
+  {
+    "src": "capital city of croatia please",
+    "tgt": "zagreb",
+    "split": "val_systematic",
+    "tags": [
+      "country:croatia",
+      "capital:zagreb"
+    ]
+  },
+  {
+    "src": "capital city of cuba",
+    "tgt": "havana",
+    "split": "val_systematic",
+    "tags": [
+      "country:cuba",
+      "capital:havana"
+    ]
+  }
+]

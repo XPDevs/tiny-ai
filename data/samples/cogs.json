@@ -1,0 +1,522 @@
+[
+  {
+    "src": "boy hates the ball",
+    "tgt": "hates ( boy , ball )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "boy hates the boat",
+    "tgt": "hates ( boy , boat )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "boy hates the cake",
+    "tgt": "hates ( boy , cake )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:cake"
+    ]
+  },
+  {
+    "src": "boy hates the cup",
+    "tgt": "hates ( boy , cup )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:cup"
+    ]
+  },
+  {
+    "src": "boy hates the hat",
+    "tgt": "hates ( boy , hat )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:hat"
+    ]
+  },
+  {
+    "src": "boy hates the key",
+    "tgt": "hates ( boy , key )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:key"
+    ]
+  },
+  {
+    "src": "boy hates the mouse",
+    "tgt": "hates ( boy , mouse )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:mouse"
+    ]
+  },
+  {
+    "src": "boy holds the ball",
+    "tgt": "holds ( boy , ball )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:holds",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "boy holds the boat",
+    "tgt": "holds ( boy , boat )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:holds",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "boy holds the book",
+    "tgt": "holds ( boy , book )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:holds",
+      "obj:book"
+    ]
+  },
+  {
+    "src": "boy holds the cake",
+    "tgt": "holds ( boy , cake )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:holds",
+      "obj:cake"
+    ]
+  },
+  {
+    "src": "boy holds the cup",
+    "tgt": "holds ( boy , cup )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:holds",
+      "obj:cup"
+    ]
+  },
+  {
+    "src": "boy holds the hat",
+    "tgt": "holds ( boy , hat )",
+    "split": "train",
+    "tags": [
+      "subj:boy",
+      "verb:holds",
+      "obj:hat"
+    ]
+  },
+  {
+    "src": "boy hates the book",
+    "tgt": "hates ( boy , book )",
+    "split": "val_indist",
+    "tags": [
+      "subj:boy",
+      "verb:hates",
+      "obj:book"
+    ]
+  },
+  {
+    "src": "boy sees the ball",
+    "tgt": "sees ( boy , ball )",
+    "split": "val_indist",
+    "tags": [
+      "subj:boy",
+      "verb:sees",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "boy sees the book",
+    "tgt": "sees ( boy , book )",
+    "split": "val_indist",
+    "tags": [
+      "subj:boy",
+      "verb:sees",
+      "obj:book"
+    ]
+  },
+  {
+    "src": "boy sees the key",
+    "tgt": "sees ( boy , key )",
+    "split": "val_indist",
+    "tags": [
+      "subj:boy",
+      "verb:sees",
+      "obj:key"
+    ]
+  },
+  {
+    "src": "boy wants the key",
+    "tgt": "wants ( boy , key )",
+    "split": "val_indist",
+    "tags": [
+      "subj:boy",
+      "verb:wants",
+      "obj:key"
+    ]
+  },
+  {
+    "src": "cat hates the boat",
+    "tgt": "hates ( cat , boat )",
+    "split": "val_indist",
+    "tags": [
+      "subj:cat",
+      "verb:hates",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "cat holds the book",
+    "tgt": "holds ( cat , book )",
+    "split": "val_indist",
+    "tags": [
+      "subj:cat",
+      "verb:holds",
+      "obj:book"
+    ]
+  },
+  {
+    "src": "cat sees the ball",
+    "tgt": "sees ( cat , ball )",
+    "split": "val_indist",
+    "tags": [
+      "subj:cat",
+      "verb:sees",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "cat sees the cake",
+    "tgt": "sees ( cat , cake )",
+    "split": "val_indist",
+    "tags": [
+      "subj:cat",
+      "verb:sees",
+      "obj:cake"
+    ]
+  },
+  {
+    "src": "dog hates the ball",
+    "tgt": "hates ( dog , ball )",
+    "split": "val_indist",
+    "tags": [
+      "subj:dog",
+      "verb:hates",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "dog hates the cup",
+    "tgt": "hates ( dog , cup )",
+    "split": "val_indist",
+    "tags": [
+      "subj:dog",
+      "verb:hates",
+      "obj:cup"
+    ]
+  },
+  {
+    "src": "dog hates the key",
+    "tgt": "hates ( dog , key )",
+    "split": "val_indist",
+    "tags": [
+      "subj:dog",
+      "verb:hates",
+      "obj:key"
+    ]
+  },
+  {
+    "src": "dog holds the key",
+    "tgt": "holds ( dog , key )",
+    "split": "val_indist",
+    "tags": [
+      "subj:dog",
+      "verb:holds",
+      "obj:key"
+    ]
+  },
+  {
+    "src": "girl hates the boat",
+    "tgt": "hates ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:hates",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "girl holds the boat",
+    "tgt": "holds ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:holds",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "girl likes the boat",
+    "tgt": "likes ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:likes",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "girl sees the boat",
+    "tgt": "sees ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:sees",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "girl wants the boat",
+    "tgt": "wants ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:wants",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "i think the girl hates the boat",
+    "tgt": "hates ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:hates",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "i think the girl holds the boat",
+    "tgt": "holds ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:holds",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "i think the girl likes the boat",
+    "tgt": "likes ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:likes",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "i think the girl sees the boat",
+    "tgt": "sees ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:sees",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "i think the girl wants the boat",
+    "tgt": "wants ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:wants",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "the girl hates the boat",
+    "tgt": "hates ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:hates",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "the girl holds the boat",
+    "tgt": "holds ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:holds",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "the girl likes the boat",
+    "tgt": "likes ( girl , boat )",
+    "split": "val_compositional",
+    "tags": [
+      "subj:girl",
+      "verb:likes",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "boy chases the ball",
+    "tgt": "chases ( boy , ball )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "boy chases the boat",
+    "tgt": "chases ( boy , boat )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "boy chases the book",
+    "tgt": "chases ( boy , book )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:book"
+    ]
+  },
+  {
+    "src": "boy chases the cake",
+    "tgt": "chases ( boy , cake )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:cake"
+    ]
+  },
+  {
+    "src": "boy chases the cup",
+    "tgt": "chases ( boy , cup )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:cup"
+    ]
+  },
+  {
+    "src": "boy chases the hat",
+    "tgt": "chases ( boy , hat )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:hat"
+    ]
+  },
+  {
+    "src": "boy chases the key",
+    "tgt": "chases ( boy , key )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:key"
+    ]
+  },
+  {
+    "src": "boy chases the mouse",
+    "tgt": "chases ( boy , mouse )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:boy",
+      "verb:chases",
+      "obj:mouse"
+    ]
+  },
+  {
+    "src": "cat chases the ball",
+    "tgt": "chases ( cat , ball )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:cat",
+      "verb:chases",
+      "obj:ball"
+    ]
+  },
+  {
+    "src": "cat chases the boat",
+    "tgt": "chases ( cat , boat )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:cat",
+      "verb:chases",
+      "obj:boat"
+    ]
+  },
+  {
+    "src": "cat chases the book",
+    "tgt": "chases ( cat , book )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:cat",
+      "verb:chases",
+      "obj:book"
+    ]
+  },
+  {
+    "src": "cat chases the cake",
+    "tgt": "chases ( cat , cake )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:cat",
+      "verb:chases",
+      "obj:cake"
+    ]
+  },
+  {
+    "src": "cat chases the cup",
+    "tgt": "chases ( cat , cup )",
+    "split": "val_systematic",
+    "tags": [
+      "subj:cat",
+      "verb:chases",
+      "obj:cup"
+    ]
+  }
+]

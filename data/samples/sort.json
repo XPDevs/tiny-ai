@@ -1,0 +1,418 @@
+[
+  {
+    "src": "sort 1 11 54",
+    "tgt": "1 11 54",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 12",
+    "tgt": "1 12",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 12 37",
+    "tgt": "1 12 37",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 13",
+    "tgt": "1 13",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 14",
+    "tgt": "1 14",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 15",
+    "tgt": "1 15",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 16",
+    "tgt": "1 16",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 17",
+    "tgt": "1 17",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 18 64",
+    "tgt": "1 18 64",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 19 4",
+    "tgt": "1 4 19",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 2 43",
+    "tgt": "1 2 43",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 20",
+    "tgt": "1 20",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 21 62",
+    "tgt": "1 21 62",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 50",
+    "tgt": "1 50",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 63 32",
+    "tgt": "1 32 63",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 72",
+    "tgt": "1 72",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 10 44",
+    "tgt": "10 44",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 10 6 70",
+    "tgt": "6 10 70",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 11 15 30",
+    "tgt": "11 15 30",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 11 76",
+    "tgt": "11 76",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 12 11",
+    "tgt": "11 12",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 12 17 24",
+    "tgt": "12 17 24",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 12 19 42",
+    "tgt": "12 19 42",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 12 26",
+    "tgt": "12 26",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 12 55 28",
+    "tgt": "12 28 55",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 12 57",
+    "tgt": "12 57",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 21 71 44",
+    "tgt": "1 21 44 71",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 1 31 68 28",
+    "tgt": "1 28 31 68",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 1 35 45 54 7",
+    "tgt": "1 7 35 45 54",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "sort 1 36 69 59",
+    "tgt": "1 36 59 69",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 1 37 48 20",
+    "tgt": "1 20 37 48",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 1 43 6 57 3",
+    "tgt": "1 3 6 43 57",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "sort 1 50 40 6 39",
+    "tgt": "1 6 39 40 50",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "sort 10 18 43 6 59",
+    "tgt": "6 10 18 43 59",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "sort 10 31 44 66",
+    "tgt": "10 31 44 66",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 53 63 37 25",
+    "tgt": "10 25 37 53 63",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "sort 10 63 76 74",
+    "tgt": "10 63 74 76",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 77 48 11",
+    "tgt": "10 11 48 77",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 11 17 60 42",
+    "tgt": "11 17 42 60",
+    "split": "val_compositional",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 1 85 56",
+    "tgt": "1 56 85",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 1 91",
+    "tgt": "1 91",
+    "split": "val_systematic",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 1 98 23 56",
+    "tgt": "1 23 56 98",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 66 20 80",
+    "tgt": "10 20 66 80",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 81 61 34",
+    "tgt": "10 34 61 81",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 89 34 70",
+    "tgt": "10 34 70 89",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 90 62 38",
+    "tgt": "10 38 62 90",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 10 93",
+    "tgt": "10 93",
+    "split": "val_systematic",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 11 79 87 26",
+    "tgt": "11 26 79 87",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 11 9 5 80",
+    "tgt": "5 9 11 80",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "sort 11 97",
+    "tgt": "11 97",
+    "split": "val_systematic",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "sort 12 23 97",
+    "tgt": "12 23 97",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "sort 12 77 94",
+    "tgt": "12 77 94",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  }
+]

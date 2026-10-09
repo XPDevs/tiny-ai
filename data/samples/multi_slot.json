@@ -1,0 +1,535 @@
+[
+  {
+    "src": "add basket and basket to the guest list",
+    "tgt": "added basket and basket to the guest list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:basket",
+      "list:guest"
+    ]
+  },
+  {
+    "src": "add basket and basket to the travel list",
+    "tgt": "added basket and basket to the travel list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:basket",
+      "list:travel"
+    ]
+  },
+  {
+    "src": "add basket and chair to the guest list",
+    "tgt": "added basket and chair to the guest list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:chair",
+      "list:guest"
+    ]
+  },
+  {
+    "src": "add basket and chair to the party list",
+    "tgt": "added basket and chair to the party list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:chair",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add basket and chair to the shopping list",
+    "tgt": "added basket and chair to the shopping list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:chair",
+      "list:shopping"
+    ]
+  },
+  {
+    "src": "add basket and clock to the party list",
+    "tgt": "added basket and clock to the party list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:clock",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add basket and clock to the shopping list",
+    "tgt": "added basket and clock to the shopping list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:clock",
+      "list:shopping"
+    ]
+  },
+  {
+    "src": "add basket and kettle to the party list",
+    "tgt": "added basket and kettle to the party list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:kettle",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add basket and mug to the todo list",
+    "tgt": "added basket and mug to the todo list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:mug",
+      "list:todo"
+    ]
+  },
+  {
+    "src": "add basket and mug to the travel list",
+    "tgt": "added basket and mug to the travel list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:mug",
+      "list:travel"
+    ]
+  },
+  {
+    "src": "add basket and plant to the guest list",
+    "tgt": "added basket and plant to the guest list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:plant",
+      "list:guest"
+    ]
+  },
+  {
+    "src": "add basket and plant to the party list",
+    "tgt": "added basket and plant to the party list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:plant",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add basket and radio to the guest list",
+    "tgt": "added basket and radio to the guest list",
+    "split": "train",
+    "tags": [
+      "item:basket",
+      "item2:radio",
+      "list:guest"
+    ]
+  },
+  {
+    "src": "add basket and cake to the shopping list",
+    "tgt": "added basket and cake to the shopping list",
+    "split": "val_indist",
+    "tags": [
+      "item:basket",
+      "item2:cake",
+      "list:shopping"
+    ]
+  },
+  {
+    "src": "add basket and plant to the shopping list",
+    "tgt": "added basket and plant to the shopping list",
+    "split": "val_indist",
+    "tags": [
+      "item:basket",
+      "item2:plant",
+      "list:shopping"
+    ]
+  },
+  {
+    "src": "add basket and radio to the party list",
+    "tgt": "added basket and radio to the party list",
+    "split": "val_indist",
+    "tags": [
+      "item:basket",
+      "item2:radio",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add basket and rug to the travel list",
+    "tgt": "added basket and rug to the travel list",
+    "split": "val_indist",
+    "tags": [
+      "item:basket",
+      "item2:rug",
+      "list:travel"
+    ]
+  },
+  {
+    "src": "add book and book to the travel list",
+    "tgt": "added book and book to the travel list",
+    "split": "val_indist",
+    "tags": [
+      "item:book",
+      "item2:book",
+      "list:travel"
+    ]
+  },
+  {
+    "src": "add book and lamp to the travel list",
+    "tgt": "added book and lamp to the travel list",
+    "split": "val_indist",
+    "tags": [
+      "item:book",
+      "item2:lamp",
+      "list:travel"
+    ]
+  },
+  {
+    "src": "add book and mug to the party list",
+    "tgt": "added book and mug to the party list",
+    "split": "val_indist",
+    "tags": [
+      "item:book",
+      "item2:mug",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add book and mug to the shopping list",
+    "tgt": "added book and mug to the shopping list",
+    "split": "val_indist",
+    "tags": [
+      "item:book",
+      "item2:mug",
+      "list:shopping"
+    ]
+  },
+  {
+    "src": "add cake and chair to the todo list",
+    "tgt": "added cake and chair to the todo list",
+    "split": "val_indist",
+    "tags": [
+      "item:cake",
+      "item2:chair",
+      "list:todo"
+    ]
+  },
+  {
+    "src": "add cake and mug to the party list",
+    "tgt": "added cake and mug to the party list",
+    "split": "val_indist",
+    "tags": [
+      "item:cake",
+      "item2:mug",
+      "list:party"
+    ]
+  },
+  {
+    "src": "add cake and plant to the guest list",
+    "tgt": "added cake and plant to the guest list",
+    "split": "val_indist",
+    "tags": [
+      "item:cake",
+      "item2:plant",
+      "list:guest"
+    ]
+  },
+  {
+    "src": "add cake and vase to the shopping list",
+    "tgt": "added cake and vase to the shopping list",
+    "split": "val_indist",
+    "tags": [
+      "item:cake",
+      "item2:vase",
+      "list:shopping"
+    ]
+  },
+  {
+    "src": "add chair and clock to the party list",
+    "tgt": "added chair and clock to the party list",
+    "split": "val_indist",
+    "tags": [
+      "item:chair",
+      "item2:clock",
+      "list:party"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the bedroom to gold",
+    "tgt": "set bedroom to gold and bedroom to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:bedroom",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the bedroom to teal",
+    "tgt": "set bedroom to gold and bedroom to teal",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:bedroom",
+      "color:gold",
+      "color2:teal"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the garage to gold",
+    "tgt": "set bedroom to gold and garage to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:garage",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the garage to teal",
+    "tgt": "set bedroom to gold and garage to teal",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:garage",
+      "color:gold",
+      "color2:teal"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the garden to gold",
+    "tgt": "set bedroom to gold and garden to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:garden",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the garden to teal",
+    "tgt": "set bedroom to gold and garden to teal",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:garden",
+      "color:gold",
+      "color2:teal"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the hall to gold",
+    "tgt": "set bedroom to gold and hall to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:hall",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the hall to teal",
+    "tgt": "set bedroom to gold and hall to teal",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:hall",
+      "color:gold",
+      "color2:teal"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the kitchen to gold",
+    "tgt": "set bedroom to gold and kitchen to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:kitchen",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the kitchen to teal",
+    "tgt": "set bedroom to gold and kitchen to teal",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:kitchen",
+      "color:gold",
+      "color2:teal"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the office to gold",
+    "tgt": "set bedroom to gold and office to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:office",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the office to teal",
+    "tgt": "set bedroom to gold and office to teal",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:office",
+      "color:gold",
+      "color2:teal"
+    ]
+  },
+  {
+    "src": "set the bedroom to gold and the porch to gold",
+    "tgt": "set bedroom to gold and porch to gold",
+    "split": "val_compositional",
+    "tags": [
+      "room:bedroom",
+      "room2:porch",
+      "color:gold",
+      "color2:gold"
+    ]
+  },
+  {
+    "src": "move the basket from the attic to the attic",
+    "tgt": "moved basket from attic to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:basket",
+      "room:attic",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the basket from the attic to the cellar",
+    "tgt": "moved basket from attic to cellar",
+    "split": "val_systematic",
+    "tags": [
+      "item:basket",
+      "room:attic",
+      "room2:cellar"
+    ]
+  },
+  {
+    "src": "move the basket from the cellar to the cellar",
+    "tgt": "moved basket from cellar to cellar",
+    "split": "val_systematic",
+    "tags": [
+      "item:basket",
+      "room:cellar",
+      "room2:cellar"
+    ]
+  },
+  {
+    "src": "move the book from the cellar to the attic",
+    "tgt": "moved book from cellar to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:book",
+      "room:cellar",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the cake from the cellar to the attic",
+    "tgt": "moved cake from cellar to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:cake",
+      "room:cellar",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the chair from the attic to the attic",
+    "tgt": "moved chair from attic to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:chair",
+      "room:attic",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the chair from the attic to the cellar",
+    "tgt": "moved chair from attic to cellar",
+    "split": "val_systematic",
+    "tags": [
+      "item:chair",
+      "room:attic",
+      "room2:cellar"
+    ]
+  },
+  {
+    "src": "move the chair from the cellar to the attic",
+    "tgt": "moved chair from cellar to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:chair",
+      "room:cellar",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the clock from the cellar to the cellar",
+    "tgt": "moved clock from cellar to cellar",
+    "split": "val_systematic",
+    "tags": [
+      "item:clock",
+      "room:cellar",
+      "room2:cellar"
+    ]
+  },
+  {
+    "src": "move the kettle from the attic to the cellar",
+    "tgt": "moved kettle from attic to cellar",
+    "split": "val_systematic",
+    "tags": [
+      "item:kettle",
+      "room:attic",
+      "room2:cellar"
+    ]
+  },
+  {
+    "src": "move the kettle from the cellar to the attic",
+    "tgt": "moved kettle from cellar to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:kettle",
+      "room:cellar",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the lamp from the attic to the attic",
+    "tgt": "moved lamp from attic to attic",
+    "split": "val_systematic",
+    "tags": [
+      "item:lamp",
+      "room:attic",
+      "room2:attic"
+    ]
+  },
+  {
+    "src": "move the lamp from the attic to the cellar",
+    "tgt": "moved lamp from attic to cellar",
+    "split": "val_systematic",
+    "tags": [
+      "item:lamp",
+      "room:attic",
+      "room2:cellar"
+    ]
+  }
+]

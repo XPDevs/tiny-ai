@@ -1,0 +1,418 @@
+[
+  {
+    "src": "reverse bear bear deer",
+    "tgt": "deer bear bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear bear fire",
+    "tgt": "fire bear bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear bear moon star",
+    "tgt": "star moon bear bear",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear bear pink",
+    "tgt": "pink bear bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear bear wind",
+    "tgt": "wind bear bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear black",
+    "tgt": "black bear",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "reverse bear black blue",
+    "tgt": "blue black bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear blue gold",
+    "tgt": "gold blue bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear blue green dog",
+    "tgt": "dog green blue bear",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear blue rain",
+    "tgt": "rain blue bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear cat",
+    "tgt": "cat bear",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "reverse bear cat moon bear",
+    "tgt": "bear moon cat bear",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear cat pine bear",
+    "tgt": "bear pine cat bear",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear bear",
+    "tgt": "bear bear",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "reverse bear black blue cat",
+    "tgt": "cat blue black bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear blue",
+    "tgt": "blue bear",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "reverse bear cat snow wind",
+    "tgt": "wind snow cat bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear deer pink",
+    "tgt": "pink deer bear",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear deer red silver",
+    "tgt": "silver red deer bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear green silver",
+    "tgt": "silver green bear",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear green star",
+    "tgt": "star green bear",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear moon black",
+    "tgt": "black moon bear",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear moth",
+    "tgt": "moth bear",
+    "split": "val_indist",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "reverse bear oak wind blue",
+    "tgt": "blue wind oak bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear pine green red",
+    "tgt": "red green pine bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear pine oak moon",
+    "tgt": "moon oak pine bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear blue dog wolf green",
+    "tgt": "green wolf dog blue bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "reverse bear dog moth snow wind white",
+    "tgt": "white wind snow moth dog bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear gold gold oak cat pine",
+    "tgt": "pine cat oak gold gold bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear gold wolf pink bear wolf",
+    "tgt": "wolf bear pink wolf gold bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear green white moon pine oak",
+    "tgt": "oak pine moon white green bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear pink moon wind green",
+    "tgt": "green wind moon pink bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "reverse bear rain cat silver star",
+    "tgt": "star silver cat rain bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "reverse bear red moth blue rain wind",
+    "tgt": "wind rain blue moth red bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear silver pine black moth dog",
+    "tgt": "dog moth black pine silver bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear silver pink frog bear bear",
+    "tgt": "bear bear frog pink silver bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "reverse bear wind blue fire deer",
+    "tgt": "deer fire blue wind bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "reverse bear wind fire gold gold",
+    "tgt": "gold gold fire wind bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "reverse bear wind red leaf dog",
+    "tgt": "dog leaf red wind bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "reverse bear bear fox",
+    "tgt": "fox bear bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear bear fox moon",
+    "tgt": "moon fox bear bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear black green fox",
+    "tgt": "fox green black bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear blue owl gold",
+    "tgt": "gold owl blue bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear fox silver",
+    "tgt": "silver fox bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear frog deer owl",
+    "tgt": "owl deer frog bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear frog owl",
+    "tgt": "owl frog bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear gold fox",
+    "tgt": "fox gold bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "reverse bear gold fox blue",
+    "tgt": "blue fox gold bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear green cat owl",
+    "tgt": "owl cat green bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear oak black owl",
+    "tgt": "owl black oak bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "reverse bear owl",
+    "tgt": "owl bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "reverse bear owl fire green",
+    "tgt": "green fire owl bear",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  }
+]

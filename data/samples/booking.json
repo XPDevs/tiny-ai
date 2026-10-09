@@ -1,0 +1,522 @@
+[
+  {
+    "src": "book 10 seats at 1pm for carol",
+    "tgt": "booked 10 seats at 1pm under carol",
+    "split": "train",
+    "tags": [
+      "name:carol",
+      "size:10",
+      "time:1pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 1pm for xavier",
+    "tgt": "booked 10 seats at 1pm under xavier",
+    "split": "train",
+    "tags": [
+      "name:xavier",
+      "size:10",
+      "time:1pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for dana",
+    "tgt": "booked 10 seats at 2pm under dana",
+    "split": "train",
+    "tags": [
+      "name:dana",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for dave",
+    "tgt": "booked 10 seats at 2pm under dave",
+    "split": "train",
+    "tags": [
+      "name:dave",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for karl",
+    "tgt": "booked 10 seats at 2pm under karl",
+    "split": "train",
+    "tags": [
+      "name:karl",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for laura",
+    "tgt": "booked 10 seats at 2pm under laura",
+    "split": "train",
+    "tags": [
+      "name:laura",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for wendy",
+    "tgt": "booked 10 seats at 2pm under wendy",
+    "split": "train",
+    "tags": [
+      "name:wendy",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 3pm for laura",
+    "tgt": "booked 10 seats at 3pm under laura",
+    "split": "train",
+    "tags": [
+      "name:laura",
+      "size:10",
+      "time:3pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 4pm for carol",
+    "tgt": "booked 10 seats at 4pm under carol",
+    "split": "train",
+    "tags": [
+      "name:carol",
+      "size:10",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 4pm for peggy",
+    "tgt": "booked 10 seats at 4pm under peggy",
+    "split": "train",
+    "tags": [
+      "name:peggy",
+      "size:10",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 4pm for trent",
+    "tgt": "booked 10 seats at 4pm under trent",
+    "split": "train",
+    "tags": [
+      "name:trent",
+      "size:10",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 5pm for karl",
+    "tgt": "booked 10 seats at 5pm under karl",
+    "split": "train",
+    "tags": [
+      "name:karl",
+      "size:10",
+      "time:5pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 5pm for uma",
+    "tgt": "booked 10 seats at 5pm under uma",
+    "split": "train",
+    "tags": [
+      "name:uma",
+      "size:10",
+      "time:5pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for erin",
+    "tgt": "booked 10 seats at 2pm under erin",
+    "split": "val_indist",
+    "tags": [
+      "name:erin",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 4pm for wendy",
+    "tgt": "booked 10 seats at 4pm under wendy",
+    "split": "val_indist",
+    "tags": [
+      "name:wendy",
+      "size:10",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 5pm for erin",
+    "tgt": "booked 10 seats at 5pm under erin",
+    "split": "val_indist",
+    "tags": [
+      "name:erin",
+      "size:10",
+      "time:5pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 7pm for dana",
+    "tgt": "booked 10 seats at 7pm under dana",
+    "split": "val_indist",
+    "tags": [
+      "name:dana",
+      "size:10",
+      "time:7pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 7pm for frank",
+    "tgt": "booked 10 seats at 7pm under frank",
+    "split": "val_indist",
+    "tags": [
+      "name:frank",
+      "size:10",
+      "time:7pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 9pm for wendy",
+    "tgt": "booked 10 seats at 9pm under wendy",
+    "split": "val_indist",
+    "tags": [
+      "name:wendy",
+      "size:10",
+      "time:9pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at evening for dave",
+    "tgt": "booked 10 seats at evening under dave",
+    "split": "val_indist",
+    "tags": [
+      "name:dave",
+      "size:10",
+      "time:evening"
+    ]
+  },
+  {
+    "src": "book 10 seats at evening for judy",
+    "tgt": "booked 10 seats at evening under judy",
+    "split": "val_indist",
+    "tags": [
+      "name:judy",
+      "size:10",
+      "time:evening"
+    ]
+  },
+  {
+    "src": "book 2 seats at 6pm for victor",
+    "tgt": "booked 2 seats at 6pm under victor",
+    "split": "val_indist",
+    "tags": [
+      "name:victor",
+      "size:2",
+      "time:6pm"
+    ]
+  },
+  {
+    "src": "book 2 seats at 7pm for mallory",
+    "tgt": "booked 2 seats at 7pm under mallory",
+    "split": "val_indist",
+    "tags": [
+      "name:mallory",
+      "size:2",
+      "time:7pm"
+    ]
+  },
+  {
+    "src": "book 2 seats at evening for nina",
+    "tgt": "booked 2 seats at evening under nina",
+    "split": "val_indist",
+    "tags": [
+      "name:nina",
+      "size:2",
+      "time:evening"
+    ]
+  },
+  {
+    "src": "book 2 seats at morning for grace",
+    "tgt": "booked 2 seats at morning under grace",
+    "split": "val_indist",
+    "tags": [
+      "name:grace",
+      "size:2",
+      "time:morning"
+    ]
+  },
+  {
+    "src": "book 3 seats at 6pm for dana",
+    "tgt": "booked 3 seats at 6pm under dana",
+    "split": "val_indist",
+    "tags": [
+      "name:dana",
+      "size:3",
+      "time:6pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 1pm for victor",
+    "tgt": "booked 11 seats at 1pm under victor",
+    "split": "val_compositional",
+    "tags": [
+      "name:victor",
+      "size:11",
+      "time:1pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 2pm for laura",
+    "tgt": "booked 11 seats at 2pm under laura",
+    "split": "val_compositional",
+    "tags": [
+      "name:laura",
+      "size:11",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 3pm for dana",
+    "tgt": "booked 11 seats at 3pm under dana",
+    "split": "val_compositional",
+    "tags": [
+      "name:dana",
+      "size:11",
+      "time:3pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 3pm for nina",
+    "tgt": "booked 11 seats at 3pm under nina",
+    "split": "val_compositional",
+    "tags": [
+      "name:nina",
+      "size:11",
+      "time:3pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 4pm for alice",
+    "tgt": "booked 11 seats at 4pm under alice",
+    "split": "val_compositional",
+    "tags": [
+      "name:alice",
+      "size:11",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 4pm for trent",
+    "tgt": "booked 11 seats at 4pm under trent",
+    "split": "val_compositional",
+    "tags": [
+      "name:trent",
+      "size:11",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 4pm for uma",
+    "tgt": "booked 11 seats at 4pm under uma",
+    "split": "val_compositional",
+    "tags": [
+      "name:uma",
+      "size:11",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 4pm for wendy",
+    "tgt": "booked 11 seats at 4pm under wendy",
+    "split": "val_compositional",
+    "tags": [
+      "name:wendy",
+      "size:11",
+      "time:4pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 5pm for frank",
+    "tgt": "booked 11 seats at 5pm under frank",
+    "split": "val_compositional",
+    "tags": [
+      "name:frank",
+      "size:11",
+      "time:5pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 5pm for ivan",
+    "tgt": "booked 11 seats at 5pm under ivan",
+    "split": "val_compositional",
+    "tags": [
+      "name:ivan",
+      "size:11",
+      "time:5pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 5pm for sybil",
+    "tgt": "booked 11 seats at 5pm under sybil",
+    "split": "val_compositional",
+    "tags": [
+      "name:sybil",
+      "size:11",
+      "time:5pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 6pm for grace",
+    "tgt": "booked 11 seats at 6pm under grace",
+    "split": "val_compositional",
+    "tags": [
+      "name:grace",
+      "size:11",
+      "time:6pm"
+    ]
+  },
+  {
+    "src": "book 11 seats at 7pm for frank",
+    "tgt": "booked 11 seats at 7pm under frank",
+    "split": "val_compositional",
+    "tags": [
+      "name:frank",
+      "size:11",
+      "time:7pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 1pm for quinn",
+    "tgt": "booked 10 seats at 1pm under quinn",
+    "split": "val_systematic",
+    "tags": [
+      "name:quinn",
+      "size:10",
+      "time:1pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 1pm for xena",
+    "tgt": "booked 10 seats at 1pm under xena",
+    "split": "val_systematic",
+    "tags": [
+      "name:xena",
+      "size:10",
+      "time:1pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for xena",
+    "tgt": "booked 10 seats at 2pm under xena",
+    "split": "val_systematic",
+    "tags": [
+      "name:xena",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 2pm for yusuf",
+    "tgt": "booked 10 seats at 2pm under yusuf",
+    "split": "val_systematic",
+    "tags": [
+      "name:yusuf",
+      "size:10",
+      "time:2pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 3pm for yusuf",
+    "tgt": "booked 10 seats at 3pm under yusuf",
+    "split": "val_systematic",
+    "tags": [
+      "name:yusuf",
+      "size:10",
+      "time:3pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 6pm for quinn",
+    "tgt": "booked 10 seats at 6pm under quinn",
+    "split": "val_systematic",
+    "tags": [
+      "name:quinn",
+      "size:10",
+      "time:6pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 6pm for xena",
+    "tgt": "booked 10 seats at 6pm under xena",
+    "split": "val_systematic",
+    "tags": [
+      "name:xena",
+      "size:10",
+      "time:6pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 7pm for yusuf",
+    "tgt": "booked 10 seats at 7pm under yusuf",
+    "split": "val_systematic",
+    "tags": [
+      "name:yusuf",
+      "size:10",
+      "time:7pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at 9pm for quinn",
+    "tgt": "booked 10 seats at 9pm under quinn",
+    "split": "val_systematic",
+    "tags": [
+      "name:quinn",
+      "size:10",
+      "time:9pm"
+    ]
+  },
+  {
+    "src": "book 10 seats at evening for yusuf",
+    "tgt": "booked 10 seats at evening under yusuf",
+    "split": "val_systematic",
+    "tags": [
+      "name:yusuf",
+      "size:10",
+      "time:evening"
+    ]
+  },
+  {
+    "src": "book 10 seats at morning for xena",
+    "tgt": "booked 10 seats at morning under xena",
+    "split": "val_systematic",
+    "tags": [
+      "name:xena",
+      "size:10",
+      "time:morning"
+    ]
+  },
+  {
+    "src": "book 10 seats at noon for quinn",
+    "tgt": "booked 10 seats at noon under quinn",
+    "split": "val_systematic",
+    "tags": [
+      "name:quinn",
+      "size:10",
+      "time:noon"
+    ]
+  },
+  {
+    "src": "book 11 seats at 1pm for quinn",
+    "tgt": "booked 11 seats at 1pm under quinn",
+    "split": "val_systematic",
+    "tags": [
+      "name:quinn",
+      "size:11",
+      "time:1pm"
+    ]
+  }
+]

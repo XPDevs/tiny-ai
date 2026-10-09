@@ -1,0 +1,623 @@
+[
+  {
+    "src": "clap once",
+    "tgt": "clap",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once"
+    ]
+  },
+  {
+    "src": "clap once after clap thrice",
+    "tgt": "clap clap clap clap",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:clap",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after clap twice",
+    "tgt": "clap clap clap",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:clap",
+      "mod2:twice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after hop once",
+    "tgt": "clap hop",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:hop",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after hop thrice",
+    "tgt": "clap hop hop hop",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:hop",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after hop twice",
+    "tgt": "clap hop hop",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:hop",
+      "mod2:twice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after jump twice",
+    "tgt": "clap jump jump",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:twice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after run once",
+    "tgt": "clap run",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:run",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after run twice",
+    "tgt": "clap run run",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:run",
+      "mod2:twice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after sit once",
+    "tgt": "clap sit",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:sit",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after sit thrice",
+    "tgt": "clap sit sit sit",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:sit",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after spin thrice",
+    "tgt": "clap spin spin spin",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:spin",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after walk once",
+    "tgt": "clap walk",
+    "split": "train",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:walk",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after clap once",
+    "tgt": "clap clap",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:clap",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after jump once",
+    "tgt": "clap jump",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after run thrice",
+    "tgt": "clap run run run",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:run",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after sit twice",
+    "tgt": "clap sit sit",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:sit",
+      "mod2:twice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after spin once",
+    "tgt": "clap spin",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:spin",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after spin twice",
+    "tgt": "clap spin spin",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:spin",
+      "mod2:twice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after walk thrice",
+    "tgt": "clap walk walk walk",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:walk",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once and jump twice",
+    "tgt": "clap jump jump",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:twice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap once and walk thrice",
+    "tgt": "clap walk walk walk",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:walk",
+      "mod2:thrice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap once then clap once",
+    "tgt": "clap clap",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:clap",
+      "mod2:once",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap once then jump twice",
+    "tgt": "clap jump jump",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:twice",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap thrice after clap once",
+    "tgt": "clap clap clap clap",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:clap",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap thrice after hop once",
+    "tgt": "clap clap clap hop",
+    "split": "val_indist",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:hop",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after jump thrice",
+    "tgt": "clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once and jump thrice",
+    "tgt": "clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap once before jump thrice",
+    "tgt": "clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:before"
+    ]
+  },
+  {
+    "src": "clap once then jump thrice",
+    "tgt": "clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap thrice after jump thrice",
+    "tgt": "clap clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap thrice and jump thrice",
+    "tgt": "clap clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap thrice before jump thrice",
+    "tgt": "clap clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:before"
+    ]
+  },
+  {
+    "src": "clap thrice then jump thrice",
+    "tgt": "clap clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap twice after jump thrice",
+    "tgt": "clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:twice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap twice and jump thrice",
+    "tgt": "clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:twice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap twice before jump thrice",
+    "tgt": "clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:twice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:before"
+    ]
+  },
+  {
+    "src": "clap twice then jump thrice",
+    "tgt": "clap clap jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:clap",
+      "mod:twice",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "hop once after jump thrice",
+    "tgt": "hop jump jump jump",
+    "split": "val_compositional",
+    "tags": [
+      "prim:hop",
+      "mod:once",
+      "prim2:jump",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after look once",
+    "tgt": "clap look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once after look thrice",
+    "tgt": "clap look look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap once and look thrice",
+    "tgt": "clap look look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:thrice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap once and look twice",
+    "tgt": "clap look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:twice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap once before look once",
+    "tgt": "clap look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:once",
+      "conn:before"
+    ]
+  },
+  {
+    "src": "clap once before look thrice",
+    "tgt": "clap look look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:thrice",
+      "conn:before"
+    ]
+  },
+  {
+    "src": "clap once then look once",
+    "tgt": "clap look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:once",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap once then look thrice",
+    "tgt": "clap look look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:thrice",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap once then look twice",
+    "tgt": "clap look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:once",
+      "prim2:look",
+      "mod2:twice",
+      "conn:then"
+    ]
+  },
+  {
+    "src": "clap thrice after look once",
+    "tgt": "clap clap clap look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:look",
+      "mod2:once",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap thrice after look thrice",
+    "tgt": "clap clap clap look look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:look",
+      "mod2:thrice",
+      "conn:after"
+    ]
+  },
+  {
+    "src": "clap thrice and look thrice",
+    "tgt": "clap clap clap look look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:look",
+      "mod2:thrice",
+      "conn:and"
+    ]
+  },
+  {
+    "src": "clap thrice and look twice",
+    "tgt": "clap clap clap look look",
+    "split": "val_systematic",
+    "tags": [
+      "prim:clap",
+      "mod:thrice",
+      "prim2:look",
+      "mod2:twice",
+      "conn:and"
+    ]
+  }
+]

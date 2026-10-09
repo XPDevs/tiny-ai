@@ -1,0 +1,418 @@
+[
+  {
+    "src": "copy bear bear",
+    "tgt": "bear bear",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "copy bear bear black",
+    "tgt": "bear bear black",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear bear green",
+    "tgt": "bear bear green",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear bear white",
+    "tgt": "bear bear white",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear black black blue",
+    "tgt": "bear black black blue",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear black fire",
+    "tgt": "bear black fire",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear black pink gold",
+    "tgt": "bear black pink gold",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear black snow oak",
+    "tgt": "bear black snow oak",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear blue",
+    "tgt": "bear blue",
+    "split": "train",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "copy bear blue bear",
+    "tgt": "bear blue bear",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear blue black gold",
+    "tgt": "bear blue black gold",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear blue blue black",
+    "tgt": "bear blue blue black",
+    "split": "train",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear blue deer",
+    "tgt": "bear blue deer",
+    "split": "train",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear bear bear pine",
+    "tgt": "bear bear bear pine",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear blue fire",
+    "tgt": "bear blue fire",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear blue silver",
+    "tgt": "bear blue silver",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear blue wind moon",
+    "tgt": "bear blue wind moon",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear cat black wind",
+    "tgt": "bear cat black wind",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear deer blue leaf",
+    "tgt": "bear deer blue leaf",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear fire snow pine",
+    "tgt": "bear fire snow pine",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear frog cat",
+    "tgt": "bear frog cat",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear moth moon gold",
+    "tgt": "bear moth moon gold",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear oak moon bear",
+    "tgt": "bear oak moon bear",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear pine gold",
+    "tgt": "bear pine gold",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear pine white",
+    "tgt": "bear pine white",
+    "split": "val_indist",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear pink black blue",
+    "tgt": "bear pink black blue",
+    "split": "val_indist",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear bear star wind pink black",
+    "tgt": "bear bear star wind pink black",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "copy bear black frog bear bear",
+    "tgt": "bear black frog bear bear",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear blue fire moth blue",
+    "tgt": "bear blue fire moth blue",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear blue snow silver cat wind",
+    "tgt": "bear blue snow silver cat wind",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "copy bear frog star white dog",
+    "tgt": "bear frog star white dog",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear moon deer black red",
+    "tgt": "bear moon deer black red",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear moth green black gold",
+    "tgt": "bear moth green black gold",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear moth green gold frog rain",
+    "tgt": "bear moth green gold frog rain",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "copy bear pine green deer pine",
+    "tgt": "bear pine green deer pine",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear pink gold moon star wolf",
+    "tgt": "bear pink gold moon star wolf",
+    "split": "val_compositional",
+    "tags": [
+      "len:6"
+    ]
+  },
+  {
+    "src": "copy bear pink pink snow moth",
+    "tgt": "bear pink pink snow moth",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear red silver bear deer",
+    "tgt": "bear red silver bear deer",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear silver white star blue",
+    "tgt": "bear silver white star blue",
+    "split": "val_compositional",
+    "tags": [
+      "len:5"
+    ]
+  },
+  {
+    "src": "copy bear bear owl",
+    "tgt": "bear bear owl",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear cat oak owl",
+    "tgt": "bear cat oak owl",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear fox black",
+    "tgt": "bear fox black",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear fox blue",
+    "tgt": "bear fox blue",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear fox oak",
+    "tgt": "bear fox oak",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear fox pink cat",
+    "tgt": "bear fox pink cat",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear fox wind",
+    "tgt": "bear fox wind",
+    "split": "val_systematic",
+    "tags": [
+      "len:3"
+    ]
+  },
+  {
+    "src": "copy bear gold black owl",
+    "tgt": "bear gold black owl",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear green fox wolf",
+    "tgt": "bear green fox wolf",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear owl",
+    "tgt": "bear owl",
+    "split": "val_systematic",
+    "tags": [
+      "len:2"
+    ]
+  },
+  {
+    "src": "copy bear owl snow black",
+    "tgt": "bear owl snow black",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear white black owl",
+    "tgt": "bear white black owl",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  },
+  {
+    "src": "copy bear wind moon owl",
+    "tgt": "bear wind moon owl",
+    "split": "val_systematic",
+    "tags": [
+      "len:4"
+    ]
+  }
+]
