@@ -1,0 +1,16 @@
+<bos>hello<eos>
+<bos>hi there<eos>
+<bos>how are you<eos>
+<bos>i am fine thank you<eos>
+<bos>what is your name<eos>
+<bos>my name is tinyai<eos>
+<bos>tell me about the sun<eos>
+<bos>the sun is a star<eos>
+<bos>what is water<eos>
+<bos>water is h2o<eos>
+<bos>what is a cat<eos>
+<bos>a cat is a small animal<eos>
+<bos>what is a dog<eos>
+<bos>a dog is a loyal animal<eos>
+<bos>goodbye<eos>
+<bos>see you later<eos>

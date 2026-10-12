@@ -1,0 +1,41 @@
+{
+  "topic": "science",
+  "entries": [
+    {
+      "keywords": ["gravity", "gravitation"],
+      "answer": "Gravity is the force by which objects with mass attract each other. On Earth it accelerates falling objects at about 9.81 metres per second squared. Albert Einstein described gravity as the curvature of spacetime."
+    },
+    {
+      "keywords": ["photosynthesis"],
+      "answer": "Photosynthesis is the process plants use to convert light, water, and carbon dioxide into sugar and oxygen. It happens in chloroplasts and is powered by the green pigment chlorophyll."
+    },
+    {
+      "keywords": ["atom", "atoms"],
+      "answer": "An atom is the smallest unit of ordinary matter. It has a nucleus of protons and neutrons surrounded by a cloud of electrons. Atoms combine to form molecules."
+    },
+    {
+      "keywords": ["water", "h2o"],
+      "answer": "Water is a molecule of two hydrogen atoms and one oxygen atom (H2O). It is the only common substance found naturally as a solid, liquid, and gas, and it is essential for all known life."
+    },
+    {
+      "keywords": ["dna", "gene", "genes", "genome"],
+      "answer": "DNA (deoxyribonucleic acid) is the molecule that stores genetic instructions. It is shaped like a double helix, and its four bases, A, T, C and G, spell out the code for building proteins."
+    },
+    {
+      "keywords": ["gravity speed of light", "speed of light", "light"],
+      "answer": "Light travels through a vacuum at 299,792,458 metres per second, about 300,000 km/s. Nothing carrying information can travel faster than this."
+    },
+    {
+      "keywords": ["solar system", "planet", "planets", "sun"],
+      "answer": "The Solar System consists of the Sun and everything bound to it by gravity, including eight planets (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune), dwarf planets, moons, and asteroids."
+    },
+    {
+      "keywords": ["evolution", "natural selection", "darwin"],
+      "answer": "Evolution is the change in inherited traits of populations over generations. Charles Darwin explained its main mechanism, natural selection, in 'On the Origin of Species' in 1859."
+    },
+    {
+      "keywords": ["electricity", "electric current", "voltage"],
+      "answer": "Electricity is the flow of electric charge, usually electrons through a conductor. Voltage is the push that drives the current, and resistance opposes it (Ohm's law: V = I x R)."
+    }
+  ]
+}

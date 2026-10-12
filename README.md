@@ -1,317 +1,535 @@
-# tiny-ai
+# TinyAI
 
-A word-level **seq2seq GRU** with attention and a copy mechanism, written from
-scratch in plain JavaScript. No libraries, no bundler, no pretrained weights, no
-network calls. It runs in Node and in the browser, learns a set of small
-input→output tasks, and ships as a single binary `.GenAI` file.
+**A tiny, educational AI framework written from scratch in pure JavaScript, by XPDevs.**
 
-The point of the project is to be *readable and honestly evaluated*: every
-gradient is derived by hand, and the generalization claims are backed by
-held-out sets (in-distribution, compositional, systematic).
+No TensorFlow. No PyTorch. No ONNX. No external AI libraries. Every matrix
+multiply, every layer, the tokenizer, the optimizer and the gradients are
+implemented by hand, so that you can read the whole thing and understand exactly
+how a Transformer works.
 
-The model itself owns **no data**. Training data lives in `data/` as
-procedurally generated JSON, and you hand it to the model:
-
-```js
-TinyAI.init({ dataset: examples });        // every example has { src, tgt, split }
-```
+TinyAI is **not** trying to compete with GPT, Gemini, Claude or Llama. It is a
+small, honest, fully understandable model you can learn from, modify, train and
+deploy on a laptop, a Raspberry Pi or in a web browser. It is built first as an
+**educational** project, but it is a real model that can genuinely be used for
+real tasks: the larger you make the model and the more data you train it on, the
+more capable it becomes. Train it small to learn, train it bigger to use it.
 
 ```
-tiny-ai/
-├── tiny-ai.js         the model: GRU, attention, copy gate, BPTT, Adam, decoding, .GenAI
-├── data/
-│   ├── gen_common.js      shared RNG / tokenizer / split helpers
-│   ├── gen_<task>.js      one procedural generator per task (seeded, deterministic)
-│   ├── generate_all.js    runs every generator, writes data/<task>.json + samples
-│   ├── loader.js          reads the JSON files (Node only) and injects `task`
-│   └── samples/           a small committed sample of every task
-├── train.js           loads data/, trains, evaluates, writes model.GenAI
-├── train.sh           thin wrapper around train.js
-├── chat.js / chat.sh  terminal REPL that loads a .GenAI file and chats
-├── gradcheck.js       finite-difference gradient check (developer tool)
-├── bench.js           throughput / accuracy benchmark
-├── test.js            quick smoke test
-├── index.html         browser chat UI that loads a .GenAI file
-└── model.GenAI        a pre-trained model (loaded by index.html)
+  ___________ _        _    ___
+ |_   _|_ _\ \      / \  |_ _|
+   | |  | | \ \ /\ / / _ \  | |
+   | |  | |  \ V  V / ___ \ | |
+   |_| |___|  \_/\_/_/   \_\___|
+   tiny transformer, written from scratch in JavaScript
 ```
+
+> **TinyAI is a project by XPDevs.**
+
+---
+
+## Table of contents
+
+- [Why TinyAI exists](#why-tinyai-exists)
+- [Features](#features)
+- [The architecture](#the-architecture)
+- [Quick start](#quick-start)
+- [Project structure](#project-structure)
+- [How it works (a guided tour)](#how-it-works-a-guided-tour)
+- [The command line tools](#the-command-line-tools)
+- [Configuration reference](#configuration-reference)
+- [Tokenizers](#tokenizers)
+- [The `.GenAI` model format](#the-genai-model-format)
+- [Knowledge plugins](#knowledge-plugins)
+- [The web UI](#the-web-ui)
+- [Growing TinyAI into something usable](#growing-tinyai-into-something-usable)
+- [Performance expectations](#performance-expectations)
+- [Testing and benchmarking](#testing-and-benchmarking)
+- [Extending TinyAI (roadmap)](#extending-tinyai-roadmap)
+- [FAQ](#faq)
+- [Credits](#credits)
+- [License](#license)
+
+---
+
+## Why TinyAI exists
+
+Most AI code today is a thin layer of Python on top of enormous C++ or CUDA
+libraries. That is the right way to build production systems, but it hides the
+ideas. TinyAI takes the opposite approach:
+
+> **Readability is the feature.** The code prefers clarity over speed. Every
+> non obvious line is explained, and every derivative is written out in the
+> comments, so you can check the mathematics yourself.
+
+The target reader is someone who has **never built an AI before**: a student, a
+hobby programmer, an open source developer, or anyone who wants to see the whole
+stack.
+
+TinyAI is educational, but it is not a toy. The architecture is a genuine
+decoder only Transformer, the same family of design used by modern language
+models, just scaled down. That means the same code keeps working as you make the
+model bigger. Grow the embedding size, add more layers, train on more text, and
+TinyAI becomes a real, usable model. The only real limits are your patience and
+your hardware, because the arithmetic runs in plain JavaScript rather than on a
+GPU.
+
+## Features
+
+- **Decoder only Transformer** (a "mini GPT"): token and positional embeddings,
+  multi head self attention, feed forward layers, residual connections, layer
+  normalization, causal masking, softmax output.
+- **Automatic differentiation from scratch**: a small tensor library with
+  reverse mode autograd. `loss.backward()` and the chain rule do the rest.
+- **Three tokenizers** written by hand: character, word and BPE (byte pair
+  encoding).
+- **Training system**: batching, cross entropy loss, Adam (and SGD) optimizers,
+  gradient clipping, warmup plus cosine learning rate schedule, validation loss,
+  checkpoints and resume.
+- **Custom `.GenAI` model format**: a human readable header followed by base64
+  encoded weights.
+- **Inference**: greedy, temperature, top K and top P (nucleus) sampling, plus
+  streaming output.
+- **Knowledge plugins**: inject facts from JSON files without retraining.
+- **Terminal chatbot** and a **vanilla web UI** (no frameworks).
+- **Runs in Node.js and in the browser** from the exact same source files.
+- Default model is about **1.3 million parameters**, **under 10 MB** on disk.
+
+## The architecture
+
+```
+        token ids  [B, T]
+             |
+   token embedding lookup            ->  [B, T, D]
+ + positional embedding              ->  [B, T, D]
+             |
+   +---------+----------+
+   |  Transformer block  |  x nLayers
+   |   +- LayerNorm      |
+   |   +- Self-Attention |  + residual
+   |   +- LayerNorm      |
+   |   +- Feed-Forward   |  + residual
+   +---------+----------+
+             |
+        final LayerNorm
+             |
+   LM head (tied to token embedding)
+             |
+        logits  [B, T, V]   ->  softmax -> sample the next token
+```
+
+The default configuration:
+
+| Setting            | Value      |
+|--------------------|------------|
+| Vocabulary size    | 4,096      |
+| Embedding size (D) | 128        |
+| Attention heads    | 4          |
+| Transformer layers | 4          |
+| Context length     | 128        |
+| Parameters         | ~1,334,000 |
+| On disk size       | ~7 MB      |
 
 ## Quick start
 
-```bash
-cd tiny-ai
-node data/generate_all.js  # writes data/*.json from the generators
-./train.sh                 # trains and writes model.GenAI (~5–10 min)
-./chat.sh                  # chat in the terminal
-node test.js               # quick smoke test, ~30 s
-node gradcheck.js          # verify the gradients, ~10 s
-```
-
-Then open `index.html` in a browser and drop in `model.GenAI`.
-
-The full datasets are git-ignored; the generators and a ~50-example sample per
-task (`data/samples/`) are committed, so a fresh checkout is reproducible with
-`node data/generate_all.js`.
-
-Training options can be overridden from the environment:
+You only need **Node.js** (version 14 or newer). There are **no dependencies to
+install**.
 
 ```bash
-STEPS=3000 node train.js my_model.GenAI
-H=48 BATCH=8 STEPS=2000 node bench.js
+# 1. Check everything works (fast)
+node test.js
+
+# 2. Train a small model quickly (a few minutes), good for a first run
+node train.js --config training/examples/tiny.json
+
+# 3. Chat with it in the terminal
+node chat.js --model models/tinyai-tiny.genai
 ```
 
-## What the model actually does
+Then open `index.html` in a browser, click **Load model**, and select
+`models/tinyai-tiny.genai`.
 
-Per decode step `t`:
-
-```
-encoder (per layer, forward)   f_i = GRU(x_i, f_{i-1})
-encoder (per layer, backward)  b_i = GRU(x_i, b_{i+1})
-enc_i = [ f_i ; b_i ]                       (2H when bidirectional)
-query q = W_q · s_t                          (s_t = top decoder state)
-scores_i = (q · enc_i) / sqrt(E) + w_cov · tanh(cov_i)
-alpha = softmax(scores)
-ctx = Σ_i alpha_i · enc_i
-decoder layer 0 input: [ E[prev_t] ; ctx ]
-decoder layer l input:  h_{l-1,t}
-logits = W_out · top + b_out
-p_gen  = sigmoid(W_gen · [top ; ctx ; E[prev_t]])
-copy   = Σ_{i : src_i = w} alphaCopy_i
-p(w)   = p_gen · softmax(logits)[w] + (1 − p_gen) · copy
-```
-
-The **copy gate** is what lets it reproduce a name/number it has never seen in
-the target before: a pointer distribution over the source tokens is mixed with
-the generative vocabulary distribution.
-
-Training is Adam on a masked cross-entropy loss built with per-example
-gradients (mini-batch = gradient accumulation), plus:
-
-- label smoothing,
-- word dropout, embedding dropout and hidden-state dropout,
-- LR warmup + cosine decay,
-- gradient clipping,
-- a validation split with early stopping.
-
-### Notebook of design choices (all explainable)
-
-| Piece | Why |
-| --- | --- |
-| GRU cells | gated recurrences, fewer gates than LSTM, stable on tiny data |
-| Bidirectional encoder | each source position sees left *and* right context |
-| Stacked layers | more nonlinearity; later layers compose earlier features |
-| Learned query projection + `1/√E` scaling | attention scores no longer blow up with dimension |
-| Coverage (`w_cov`) | penalizes re-attending to the same source token; reduces repeats |
-| Separate copy attention head | the pointer decision and the generation decision can differ |
-| Label smoothing | stops the softmax from becoming over-confident |
-| Mini-batch accumulation | smoother gradients; no artificial padding |
-| Masked loss/attention | correct if padded batches are ever used |
-
-## Data and evaluation splits
-
-Each example is `{ src, tgt, split, tags[] }`. Every generator tags its own
-examples, so the split rules live right next to the data they describe. There
-are four splits:
-
-| split | meaning |
-| --- | --- |
-| `train` | the model is allowed to fit these |
-| `val_indist` | random holdout from the same distribution as training |
-| `val_compositional` | new *combinations* of pieces each seen during training |
-| `val_systematic` | a value that never appears during training at all |
-
-A **compositional** example uses pieces each seen in training but never in this
-combination. A **systematic** example contains a token or operation *never seen
-during training at all* — it can only be solved by learning the rule (and, for
-copy/reverse/sort/qa_copy, by using the copy mechanism to emit a token that was
-never in a training target).
-
-Task generators and their held-out splits:
-
-| Task | what it is | compositional | systematic |
-| --- | --- | --- | --- |
-| `conversations` | intent → canonical reply, many paraphrases (the model knows its name is **tiny-ai**) | unseen phrasing wrapper | 10 whole unseen intents |
-| `booking` | table booking slot filling | sizes 11/12 (unseen with a name) | 3 unseen names |
-| `multi_slot` | 2–3 slot requests, 5 templates | held-out colours `gold`/`teal` | unseen rooms `attic`/`cellar` |
-| `copy` | repeat the words | length 5–6 sequences | unseen words `fox`/`owl` |
-| `reverse` | reverse the words | length 5–6 sequences | unseen words `fox`/`owl` |
-| `sort` | ascending numeric sort | lengths 4–5 | numbers `80..99` |
-| `arithmetic` | `add`/`plus`/`sum` phrasings | both operands in `21..30` | operands `42..45` |
-| `qa_copy` | country → capital lookup | unseen phrasing prefix | 6 unseen countries |
-| `successor` | `next 5` → `6`, `previous 40` → `39` | double step `next next 5` | numbers `90..99` |
-| `scan` | command expansion | `jump thrice` | unseen primitive `look` |
-| `cogs` | `subject verb object` → logical form | `(girl, boat)` pair | unseen verb `chases` |
-
-Target sizes are set per task (`TARGET_TOKENS`) so the whole set is roughly
-350k tokens; the train split is trimmed deterministically to hit the target
-while the held-out splits are kept complete (capped at 400 examples each so
-the evaluation stays fast).
-
-## Where it generalizes — and where it only memorizes
-
-This is the honest part, and it is worth being explicit. "Generalization" here
-does not mean the model understands language; it means the *best* tasks are
-solvable by a function the network can actually learn, and the held-out splits
-measure exactly that.
-
-**It generalizes (holds out a value/combination and still scores above chance):**
-
-- `successor` — the cleanest case. The answer is `n ± 1`; the systematic split
-  uses numbers `90..99` that never appear in training, so a lookup table cannot
-  answer them. A model that learned the *ordering rule* gets them right.
-- `copy` / `reverse` — the copy gate lets the decoder emit a token straight from
-  the source. That is what carries the systematic split (words `fox`/`owl` never
-  appear in a training target) and the compositional split (longer orderings).
-- `booking` / `multi_slot` / `qa_copy` — rigid templates plus the copy gate. The
-  model learns the template and copies the slots, so unseen names/sizes/rooms
-  and unseen phrasings still work.
-- `arithmetic` / `sort` / `scan` / `cogs` — compositional splits test *unseen
-  combinations* of seen pieces (e.g. adding two operands it never saw together);
-  the rule transfers even though the exact pair did not.
-
-**It only memorizes (and that is expected):**
-
-- `conversations` is a lookup table by construction: one canonical reply per
-  intent, many paraphrases. The compositional split (a held-out *phrasing
-  wrapper*) is the one place it can show paraphrase-level generalization; the
-  systematic split (ten brand-new intents) is deliberately unanswerable from the
-  input and should be ~0%.
-- The name questions (`what is your name` → `my name is tiny-ai`) are also
-  memorized, but because they are phrased many ways and the response is fixed,
-  the model does generalize across the *phrasings* it saw.
-
-The point of reporting `val_indist` / `val_compositional` / `val_systematic`
-separately is to make this distinction visible instead of hiding it behind one
-blended accuracy number.
-
-
-## What to expect
-
-These are exact-match numbers from a real run of the default architecture
-(`H=64, E=32, layers=2, bidir=true, coverage=true, batch=6`). Exact values vary
-with seed and step count.
-
-```
-                 in-distribution   compositional   systematic
-greedy           ...
-beam-4           ...
-```
-
-Per task (greedy / beam, held-out sets):
-
-```
-task            in-dist            compositional      systematic
-...
-```
-
-Observations worth expecting:
-
-- **Chat and structured tasks behave differently.** The template tasks
-  (booking, multi_slot, copy, reverse, sort) have rigid structure and are
-  learned well; the conversational set is mostly memorization.
-- **Copy-based tasks generalize better than arithmetic.** copy/reverse/qa_copy
-  systematic accuracy is driven by the pointer: it can copy a token straight
-  from the source even though it never appeared in a training target.
-  Systematic arithmetic must be learned as an actual rule, so it is harder.
-- **Compositional means unseen combinations, not unseen values.** Arithmetic
-  held-out operands, for example, are still in `0..41`; the model must apply
-  `add` to a pair it never saw.
-- **On a tiny model, greedy can beat beam.** Beam search maximizes joint
-  sequence log-probability, and a small model can be miscalibrated at the
-  sequence level: it may assign higher total likelihood to a degenerate
-  sequence. This is an honest property of an undertrained seq2seq model — beam
-  is only as good as the model's joint distribution.
-- **Validation loss plateaus early.** Early stopping watches validation loss
-  while the headline metric is exact match.
-
-### It is still a tiny model
-
-- It will not write grammatical English outside the trained templates.
-- Arithmetic is limited to the ranges seen in training (plus the compositional
-  region); there is no learned notion of "carry" beyond the data.
-- Beam search only re-ranks; it cannot invent a token that greedy would never
-  assign nonzero probability to early.
-
-## Gradient check
-
-Because the backward pass is hand-written, `gradcheck.js` builds a tiny model
-with dropout disabled and compares analytic gradients against central finite
-differences on a random sample of parameters:
+To train the full default model (much slower, needs patience):
 
 ```bash
-node gradcheck.js          # all features on
-LAYERS=1 BIDIR=0 HEADS=0 COV=0 node gradcheck.js   # minimal model
+node train.js
 ```
 
-All configurations should print `GRADCHECK PASSED`.
-
-## `.GenAI` file format
+## Project structure
 
 ```
-[0..5]   magic "GenAIx" (v2 writes "GenAI2")
-[6..9]   uint32 little-endian header length
-[10..]   UTF-8 JSON header (version, vocab, dims, tensor manifest)
-[pad]    zero padding to an 8-byte boundary
-[...]    Float64 tensor data in manifest order
+tiny-ai/
+|
++-- index.html           the whole web UI in one self contained file
+|                        (markup + inline CSS + inline JavaScript)
+|
++-- src/
+|   +-- tensor.js        Tensor class + autograd engine (the foundation)
+|   +-- tokenizer.js     character / word / BPE tokenizers
+|   +-- attention.js     multi head causal self attention
+|   +-- transformer.js   layer norm, feed forward, transformer block
+|   +-- optimizer.js     SGD and Adam optimizers
+|   +-- model.js         the model, generation, and the .GenAI format
+|   +-- trainer.js       the training loop, checkpoints, validation
+|   +-- knowledge.js     external knowledge plugins
+|
++-- training/
+|   +-- datasets/        sample.txt, chat.txt
+|   +-- checkpoints/     checkpoints are written here
+|   +-- examples/        tiny.json, default.json, bpe.json
+|
++-- knowledge/           animals.json, science.json, history.json, ...
++-- models/              trained .genai models live here
+|
++-- train.js             training entry point
++-- chat.js              terminal chatbot
++-- benchmark.js         speed and size measurements
++-- test.js              test suite (including gradient checks)
+|
++-- package.json
++-- README.md
 ```
 
-Version 2 adds layers / bidir / attention-heads / coverage to the header and
-names tensors `enc_fwd_<l>_*`, `enc_bwd_<l>_*`, `dec_<l>_*`, `E`, `W_out`,
-`b_out`, `W_gen`, `b_gen`, `W_q_gen`, `W_q_copy`, `w_cov`. Old version-1 files
-still load: missing tensors are re-derived (the attention query projection
-becomes the identity), so a v1 model reproduces its original behaviour.
+Everything is organised into four clear places: the framework core in `src/`,
+the data and configuration in `training/`, the facts in `knowledge/`, and the
+trained models in `models/`. The command line tools and the single file web UI
+sit at the top level so they are easy to find.
 
-## Public API
+## How it works (a guided tour)
+
+If you read the files in this order, each one builds on the last.
+
+### 1. `src/tensor.js`, tensors and autograd
+
+A **tensor** is just a flat array of numbers plus a shape. This file implements
+`add`, `sub`, `mul`, `div`, `matmul`, `transpose`, `reshape`, `softmax`,
+`layernorm` helpers, `embedding`, cross entropy, and more, each with an
+explicitly derived backward pass.
+
+It also implements `backward()`: it walks the computation graph in reverse and
+applies the chain rule. This is the entire secret of deep learning.
+
+### 2. `src/tokenizer.js`, text to numbers
+
+Characters, words, or BPE sub words. Each tokenizer can `encode`, `decode`,
+`save` and `load`.
+
+### 3. `src/attention.js`, self attention
+
+```
+Attention(Q, K, V) = softmax( Q * K^T / sqrt(d_k) ) * V
+```
+
+Every token forms a query, a key and a value, and attends to every other token.
+A causal mask hides the future, so the model can only look backwards.
+
+### 4. `src/transformer.js`, the block
+
+LayerNorm, then attention, then residual. LayerNorm, then feed forward, then
+residual. Stack this `nLayers` times.
+
+### 5. `src/optimizer.js`, how learning happens
+
+Adam keeps running averages of the gradient and of the squared gradient, and
+takes a well scaled step for every parameter.
+
+### 6. `src/model.js`, putting it together
+
+Builds the model, runs the forward pass, generates text, and reads and writes
+`.GenAI` files.
+
+### 7. `src/trainer.js`, the loop
+
+Shows the model batches of text, measures cross entropy, back propagates, and
+steps the optimizer, over and over, until the loss goes down.
+
+## The command line tools
+
+### Training
+
+```bash
+node train.js                                  # the default model
+node train.js --config training/examples/tiny.json
+node train.js --steps 500 --dmodel 64 --layers 2 --batch 8 --lr 0.001
+node train.js --tokenizer bpe --vocab 512
+node train.js --resume                         # continue from a checkpoint
+node train.js --data training/datasets/chat.txt --out models/mychat.genai
+```
+
+| Flag           | Meaning                                    |
+|----------------|--------------------------------------------|
+| `--config`     | JSON config file (model and training)      |
+| `--data`       | Text file to train on                      |
+| `--tokenizer`  | `char` (default), `word` or `bpe`          |
+| `--vocab`      | Target vocabulary size (BPE)               |
+| `--steps`      | Number of training steps                   |
+| `--batch`      | Batch size                                 |
+| `--block`      | Context length                             |
+| `--dmodel`     | Embedding dimension                        |
+| `--heads`      | Attention heads                            |
+| `--layers`     | Transformer layers                         |
+| `--lr`         | Learning rate                              |
+| `--out`        | Output `.genai` path                       |
+| `--resume`     | Resume from `training/checkpoints`         |
+
+### Chatting
+
+```bash
+node chat.js
+node chat.js --model models/tinyai.genai --temperature 0.7 --topk 40 --topp 0.95
+```
+
+Inside the chat: `/help`, `/reset`, `/temp`, `/topk`, `/topp`, `/tokens`,
+`/settings`, `/quit`.
+
+### Benchmarks and tests
+
+```bash
+node benchmark.js                 # speed and model size
+node test.js                      # correctness and gradient checks
+```
+
+## Configuration reference
+
+An example config (`training/examples/default.json`):
+
+```json
+{
+  "model": {
+    "dModel": 128,
+    "nHeads": 4,
+    "nLayers": 4,
+    "blockSize": 128,
+    "tieWeights": true
+  },
+  "tokenizer": { "type": "char", "vocabSize": 4096 },
+  "training": {
+    "batchSize": 8,
+    "lr": 0.0003,
+    "minLr": 0.00003,
+    "weightDecay": 0.01,
+    "gradClip": 1.0,
+    "warmup": 100,
+    "maxSteps": 1000,
+    "logEvery": 10,
+    "evalInterval": 100,
+    "checkpointInterval": 250,
+    "valSplit": 0.1
+  },
+  "data": "training/datasets/sample.txt",
+  "out": "models/tinyai.genai"
+}
+```
+
+- `tieWeights`: share the token embedding matrix with the output head (fewer
+  parameters).
+- `warmup` plus cosine decay: the learning rate ramps up, then decays smoothly.
+- `gradClip`: caps the gradient norm so a bad batch cannot blow up training.
+- `valSplit`: fraction of the text held out to measure generalization.
+
+## Tokenizers
 
 ```js
-TinyAI.init({ dataset, splits, /* overrides */ }); // returns status
-TinyAI.train(budgetMs);             // trains for ~budgetMs, returns status
-TinyAI.respond(text, temperature);  // sampled reply
-TinyAI.greedy(text);                // greedy reply
-TinyAI.beamSearch(text, beamSize);  // beam reply
-TinyAI.accuracy(examples, opts);    // exact-match over [{src,tgt}, ...]
-TinyAI.splits();                    // { train, inDist, compositional, systematic }
-TinyAI.status();                    // ready, steps, loss, valLoss, bestValLoss, params, ...
-TinyAI.save();                      // -> ArrayBuffer (.GenAI v2)
-TinyAI.load(bufferOrArray);         // -> status
-TinyAI.vocabulary();                // string[]
-TinyAI.setTarget(steps);            // extend the training horizon
-TinyAI.isLoaded();
-TinyAI.model();                     // the raw Model (advanced)
+const { createTokenizer } = require('./src/tokenizer.js');
+
+const charTok = createTokenizer('char', text);
+const wordTok = createTokenizer('word', text);
+const bpeTok  = createTokenizer('bpe', text, 512); // target vocab size
+
+charTok.encode('hello');  // -> [ids]
+charTok.decode([ids]);    // -> 'hello'
+charTok.save();           // -> plain object (JSON)
 ```
 
-`init` accepts the data directly:
+BPE learns merges like `t + h -> th`, `th + e -> the`, growing a vocabulary of
+useful sub word pieces, the same idea real models use.
 
-- `dataset`: an array of `{ src, tgt, split }`. If no `splits` are given, the
-  examples are grouped by their own `.split` field. Split names are accepted in
-  both the new (`val_indist` / `val_compositional` / `val_systematic`) and old
-  (`in` / `comp` / `sys`) spellings.
-- `splits`: an explicit `{ train, inDist, compositional, systematic }` (or the
-  `val_*` spellings) object, overriding `.split`.
+## The `.GenAI` model format
 
-The original API surface (`init`, `train`, `respond`, `status`, `setTarget`,
-`vocabulary`, `save`, `load`, `isLoaded`) is unchanged, so existing callers keep
-working. The old in-browser default dataset (`tasks.js`) is gone — the browser
-page only loads a `.GenAI` file, while training happens in Node from `data/`.
+A `.GenAI` file is text. The header is human readable, and the weights are
+base64 encoded so the file stays small:
 
-## Knobs
+```
+TINYAI-GENAI
+version: 1
+generator: TinyAI
+architecture: transformer-decoder
+layers: 4
+heads: 4
+dModel: 128
+blockSize: 128
+vocabSize: 4096
+parameters: 1334016
+tokenizer: char
+---CONFIG---
+{"vocabSize":4096,"dModel":128,...}
+---TOKENIZER---
+{"type":"char","tokens":["<pad>","<unk>",...]}
+---WEIGHTS---
+tokEmb 4096,128 <base64 float32>
+...
+---END---
+```
 
-All defaults live in `DEFAULTS` at the top of `tiny-ai.js`:
+```js
+const model = TinyModel.loadFile('models/tinyai.genai');
+model.saveFile('models/copy.genai');
+model.generateText('Once upon a time', { maxNewTokens: 40 });
+```
 
-| option | default | notes |
-| --- | --- | --- |
-| `hidden` / `embed` | 64 / 32 | model width |
-| `layers` / `bidir` | 2 / true | encoder & decoder depth; encoder direction |
-| `batchSize` | 6 | examples accumulated per update |
-| `targetSteps` | 10000 | training horizon |
-| `lr` / `minLr` | 0.004 / 0.0002 | cosine decay bounds |
-| `warmupSteps` / `lrDecaySteps` | 300 / 10000 | schedule shape |
-| `labelSmoothing` | 0.05 | target distribution smoothing |
-| `wordDropout` | 0.1 | replace input token with `<unk>` |
-| `embDropout` / `hiddenDropout` | 0.1 / 0.1 | regularization |
-| `coverage` / `coverageWeight` | true / 0.5 | anti-repetition term |
-| `attnHeads` | false | separate attention head for the copy distribution |
-| `attnScale` | true | divide attention scores by `sqrt(E)` |
-| `seed` | 1337 | RNG seed for init, shuffling, dropout |
+## Knowledge plugins
 
-Generators are deterministic too: `node data/generate_all.js` twice produces
-byte-identical files.
+A tiny model does not have to know everything. Drop JSON files into
+`knowledge/`, and TinyAI will search them **before** calling the model, so no
+retraining is required:
+
+```json
+{
+  "topic": "animals",
+  "entries": [
+    { "keywords": ["cat", "cats"], "answer": "Cats are small domesticated mammals..." }
+  ]
+}
+```
+
+Add your own facts by creating another file such as `knowledge/space.json`.
+This is a very small version of "retrieval augmented generation" (RAG).
+
+## The web UI
+
+The web UI is a **single self contained file**, `index.html`. It has the
+markup, the CSS and the front end JavaScript all inlined, so there are no
+`app.js` or `style.css` files to manage. It is plain HTML, CSS and JavaScript,
+with no frameworks and no build step.
+
+- Chat interface with **streaming** responses (token by token)
+- **Load model** button and drag and drop for `.genai` files
+- **Save** and **export** conversations (localStorage plus a `.txt` download)
+- **Dark mode** toggle (remembered between visits)
+- Responsive layout for mobile
+
+Open `index.html` directly, or serve the folder to enable the full knowledge
+plugins (browsers block `fetch` on `file://`):
+
+```bash
+# any static server works, for example:
+npx serve .
+# or
+python -m http.server
+```
+
+The browser runs the **same** `src/*.js` files as Node, loaded via `<script>`
+tags in dependency order.
+
+## Growing TinyAI into something usable
+
+TinyAI starts small on purpose, so it is cheap to train while you learn. The
+same code scales. To turn it into a genuinely useful assistant:
+
+1. **Give it more data.** Train on a larger text file with
+   `node train.js --data your-big-file.txt`. Loss falls as the data grows.
+2. **Give it a bigger model.** Increase `--dmodel`, `--layers` and `--block`.
+   More parameters means more capacity to learn.
+3. **Give it a better vocabulary.** BPE with a few thousand tokens packs more
+   meaning into each position than single characters.
+4. **Give it knowledge.** Add facts in `knowledge/` for anything the model
+   cannot reasonably memorize.
+
+Remember the trade off: bigger models are more capable but slower to train in
+pure JavaScript. Experiment small, then commit to a bigger run once you are
+happy with the setup.
+
+## Performance expectations
+
+TinyAI is written for humans, not for GPUs. The arithmetic is naive JavaScript
+loops, so it is **much** slower than a library that calls optimized BLAS or CUDA
+kernels. That is a deliberate trade off. Rough numbers on a normal laptop:
+
+| Model                       | Forward (1x128) | Train step (B=8) | Generation |
+|-----------------------------|-----------------|------------------|------------|
+| tiny (D=64, L=2, V~53)      | ~50 ms          | ~0.5 s           | ~65 tok/s  |
+| default (D=128, L=4, V~53)  | ~0.4 s          | ~12 s            | ~3 tok/s   |
+
+Practical advice:
+
+- Start with `training/examples/tiny.json`.
+- Use a **character or small BPE** vocabulary for quick experiments.
+- Generation cost grows with context length, so keep prompts reasonably short.
+- For a faster machine, it is worth trying a smaller `dModel` and `blockSize`
+  before adding layers.
+
+The good news: **inference is fast enough for a real chatbot** with the tiny
+model, and the full model still fits comfortably under 10 MB.
+
+## Testing and benchmarking
+
+```bash
+node test.js
+```
+
+The suite checks hand calculations (for example `matmul`), tokenizer round
+trips, model save and load fidelity, knowledge search, and, most importantly,
+compares **every backward pass against a numerical (finite difference)
+gradient**. If autograd were wrong, these tests would fail.
+
+```bash
+node benchmark.js --dmodel 64 --layers 2 --block 64
+```
+
+## Extending TinyAI (roadmap)
+
+The architecture was designed so these can be added without a rewrite:
+
+- **Quantization:** store weights as 8 bit integers to shrink the model further.
+  The `.GenAI` header already carries a version field.
+- **LoRA and adapters:** freeze the base weights and train small low rank
+  matrices. The parameter list is a flat `{name, tensor}` array.
+- **Multi modal and image embeddings:** add a second embedding path that
+  projects patches into the same `D` dimensional space.
+- **Voice input and output:** pair with the Web Speech API in the browser.
+- **Function calling and tool use:** intercept special tokens in `generate()`
+  and call a JavaScript function.
+- **Internet search and long term memory:** extend `KnowledgeBase` to query
+  online sources or a vector store.
+
+Because everything is plain JavaScript with no build step, each of these is a
+small, self contained change.
+
+## FAQ
+
+**Does it use any libraries?**
+No. Only the Node.js standard library (`fs`, `path`, `readline`) for file and
+terminal access. The math is entirely bespoke.
+
+**Can it run in a browser?**
+Yes. The `src/` files work both as Node modules and as browser scripts, and the
+single file web UI loads the same `.genai` models you train on the command line.
+
+**Why is training slow?**
+Because the operations are simple, readable JavaScript loops rather than
+optimized native kernels. Use `tiny.json`, a small vocabulary, and a short
+context while experimenting.
+
+**Is the default model really about 1M parameters?**
+With the four special tokens the default character vocabulary is small, so the
+default model lands around 0.8M parameters. With a 4,096 token vocabulary (for
+example BPE) it is exactly 1,334,016 parameters, within the 500k to 2M target,
+and about 7 MB on disk.
+
+**Where do the gradients come from?**
+Every operation records a small backward function. `loss.backward()` walks the
+graph in reverse applying the chain rule. `node test.js` verifies each one
+against a numerical gradient.
+
+**Can I actually use this, or is it only for learning?**
+Both. It is designed to be read and learned from, but it is a real Transformer.
+As you increase the model size and the amount of training data, it becomes a
+genuinely usable text generator.
+
+## Credits
+
+TinyAI is created and maintained by **XPDevs**. It is an open, educational
+project, and contributions, ideas and improvements are welcome.
+
+## License
+
+MIT. Take it, read it, break it, improve it, share it.

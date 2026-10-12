@@ -1,0 +1,28 @@
+{
+  "name": "tinyai",
+  "version": "1.0.0",
+  "description": "TinyAI by XPDevs, a tiny educational transformer framework written in pure JavaScript. No TensorFlow, no PyTorch, no ONNX.",
+  "author": "XPDevs",
+  "main": "src/model.js",
+  "type": "commonjs",
+  "scripts": {
+    "train": "node train.js",
+    "train:tiny": "node train.js --config training/examples/tiny.json",
+    "chat": "node chat.js",
+    "test": "node test.js",
+    "benchmark": "node benchmark.js"
+  },
+  "keywords": [
+    "ai",
+    "transformer",
+    "gpt",
+    "neural-network",
+    "from-scratch",
+    "educational",
+    "javascript"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}

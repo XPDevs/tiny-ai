@@ -1,0 +1,33 @@
+{
+  "topic": "conversation",
+  "entries": [
+    {
+      "keywords": ["hello", "hi", "hey", "greetings"],
+      "answer": "Hello! I am TinyAI, a small Transformer written from scratch in JavaScript. Ask me something, or type 'help'."
+    },
+    {
+      "keywords": ["how are you", "how are you doing"],
+      "answer": "I am running happily on pure JavaScript. How can I help you today?"
+    },
+    {
+      "keywords": ["who are you", "what are you", "your name"],
+      "answer": "I am TinyAI, a tiny educational Transformer by XPDevs. My whole source code is meant to be read, not just run."
+    },
+    {
+      "keywords": ["help", "what can you do"],
+      "answer": "I can chat using my trained Transformer, and I can look up facts from my knowledge plugins (animals, science, history). Try: 'tell me about octopuses' or 'what is gravity?'."
+    },
+    {
+      "keywords": ["thank you", "thanks", "thank"],
+      "answer": "You are very welcome!"
+    },
+    {
+      "keywords": ["bye", "goodbye", "see you"],
+      "answer": "Goodbye! Keep exploring and keep hacking on TinyAI."
+    },
+    {
+      "keywords": ["what is tinyai", "about tinyai", "what is tiny ai"],
+      "answer": "TinyAI is an educational AI framework by XPDevs, written entirely in pure JavaScript: no TensorFlow, no PyTorch, no ONNX. Every matrix multiply, every gradient, and the tokenizer are implemented by hand so that you can learn from and modify them."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+TinyAI is a small, educational artificial intelligence framework written entirely in pure JavaScript.
+It was built so that a single developer can read all of the source code and understand every operation.
+There are no external machine learning libraries. There is no TensorFlow, no PyTorch, and no ONNX.
+Every matrix multiplication is written by hand. Every gradient is derived and coded by hand.
+The goal of TinyAI is not to compete with large language models. The goal is to teach.
+A student can open the files, change a number, retrain the model, and watch what happens.
+TinyAI is portable. It runs in Node.js, in a web browser, and on a small computer such as a Raspberry Pi.
+TinyAI is easy to hack. The code prefers clarity over speed, which makes it a good place to learn.
+
+A transformer is a type of neural network. It reads a sequence of tokens and predicts the next token.
+A token is a small piece of text. It can be a single character, a whole word, or part of a word.
+The tokenizer turns text into tokens and tokens back into text.
+The model first looks up an embedding for every token. An embedding is a list of numbers, a vector.
+The model then adds a positional embedding so that it knows the order of the tokens.
+Self attention lets every token look at every other token and decide what to pay attention to.
+Multi head attention runs several attention operations at the same time, one for each head.
+The feed forward network processes each token on its own after attention has mixed the information.
+Residual connections add the input of a layer back to its output. They help gradients flow.
+Layer normalization keeps the numbers in a healthy range by centering and scaling them.
+The output of the model is a score, called a logit, for every token in the vocabulary.
+A softmax turns the logits into probabilities. The model then samples the next token.
+Training adjusts the weights of the model so that the correct next token becomes more likely.
+The loss function measures how wrong the model is. Cross entropy is the usual choice.
+Backpropagation computes the gradient of the loss with respect to every weight using the chain rule.
+The optimizer, usually Adam, moves every weight a small step in the downhill direction.
+After many steps the loss goes down and the model begins to produce sensible text.
+
+The sun is a star at the center of the solar system.
+The Earth orbits the sun once every year.
+The moon orbits the Earth about once every month.
+Water is made of two hydrogen atoms and one oxygen atom.
+Plants use sunlight to make food in a process called photosynthesis.
+Gravity pulls objects toward each other.
+Light travels faster than anything else in the universe.
+A cat is a small domesticated animal that often lives with people.
+A dog is a loyal animal that humans domesticated thousands of years ago.
+An elephant is the largest land animal on Earth.
+A whale lives in the ocean and can grow very large.
+Birds have feathers and most of them can fly.
+Bees make honey and help flowers to grow.
+
+Science is the study of the natural world.
+Mathematics is the study of numbers, patterns, and shapes.
+History is the study of the past and the people who lived in it.
+The internet connects computers all around the world.
+A computer reads instructions and performs calculations very quickly.
+Learning to program is like learning a new language.
+Practice makes progress. Reading code makes you a better programmer.
+Write simple code. Make it clear. Then make it fast, if you must.

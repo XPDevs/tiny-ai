@@ -1,0 +1,37 @@
+{
+  "topic": "history",
+  "entries": [
+    {
+      "keywords": ["world war 2", "world war ii", "wwii", "second world war"],
+      "answer": "World War II lasted from 1939 to 1945. It was fought between the Allies (including Britain, the USSR, and the USA) and the Axis (Germany, Italy, and Japan). It ended in Europe in May 1945 and in the Pacific in September 1945."
+    },
+    {
+      "keywords": ["world war 1", "world war i", "wwi", "first world war"],
+      "answer": "World War I lasted from 1914 to 1918. It began after the assassination of Archduke Franz Ferdinand and was fought mainly in Europe between the Allies and the Central Powers."
+    },
+    {
+      "keywords": ["roman empire", "rome", "romans"],
+      "answer": "The Roman Empire began in 27 BC with Augustus and, at its height, surrounded the Mediterranean. The Western Empire fell in 476 AD, while the Eastern (Byzantine) Empire lasted until 1453."
+    },
+    {
+      "keywords": ["egypt", "ancient egypt", "pyramid", "pyramids", "pharaoh"],
+      "answer": "Ancient Egypt was a civilisation along the Nile that lasted over 3,000 years. It is famous for its pyramids, hieroglyphic writing, and pharaohs such as Tutankhamun and Ramesses II."
+    },
+    {
+      "keywords": ["moon landing", "apollo 11", "apollo"],
+      "answer": "On 20 July 1969 the Apollo 11 mission landed the first humans on the Moon. Neil Armstrong and Buzz Aldrin walked on its surface while Michael Collins orbited above."
+    },
+    {
+      "keywords": ["internet", "when was the internet invented", "arpanet"],
+      "answer": "The Internet grew out of ARPANET, a US research network switched on in 1969. The World Wide Web was invented by Tim Berners-Lee at CERN in 1989."
+    },
+    {
+      "keywords": ["renaissance"],
+      "answer": "The Renaissance was a period of cultural and scientific rebirth in Europe from roughly the 14th to the 17th century. It produced artists such as Leonardo da Vinci and Michelangelo."
+    },
+    {
+      "keywords": ["shakespeare", "william shakespeare"],
+      "answer": "William Shakespeare (1564-1616) was an English playwright and poet. He wrote about 39 plays, including 'Hamlet', 'Romeo and Juliet', and 'Macbeth'."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "model": {
+    "dModel": 128,
+    "nHeads": 4,
+    "nLayers": 4,
+    "blockSize": 128,
+    "tieWeights": true
+  },
+  "tokenizer": {
+    "type": "char",
+    "vocabSize": 4096
+  },
+  "training": {
+    "batchSize": 8,
+    "lr": 0.0003,
+    "minLr": 0.00003,
+    "weightDecay": 0.01,
+    "gradClip": 1.0,
+    "warmup": 100,
+    "maxSteps": 1000,
+    "logEvery": 10,
+    "evalInterval": 100,
+    "evalBatches": 10,
+    "checkpointInterval": 250,
+    "checkpointDir": "training/checkpoints",
+    "valSplit": 0.1
+  },
+  "data": "training/datasets/sample.txt",
+  "out": "models/tinyai.genai"
+}

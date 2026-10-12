@@ -1,0 +1,37 @@
+{
+  "topic": "animals",
+  "entries": [
+    {
+      "keywords": ["cat", "cats", "kitten", "kittens", "feline"],
+      "answer": "Cats are small domesticated carnivorous mammals. They are often kept as pets, sleep around 13-16 hours a day, and are famous for purring, grooming themselves, and hunting small rodents."
+    },
+    {
+      "keywords": ["dog", "dogs", "puppy", "puppies", "canine"],
+      "answer": "Dogs are domesticated descendants of wolves and were the first animals humans domesticated, roughly 15,000 years ago. They have an excellent sense of smell and are used for guarding, herding, and companionship."
+    },
+    {
+      "keywords": ["elephant", "elephants"],
+      "answer": "Elephants are the largest living land animals. They are highly intelligent, live in matriarchal herds, and use their trunks for breathing, drinking, grabbing objects, and producing sound."
+    },
+    {
+      "keywords": ["blue whale", "whale", "whales"],
+      "answer": "The blue whale is the largest animal that has ever lived, reaching about 30 metres long and weighing up to 180 tonnes. Despite its size it feeds almost entirely on tiny shrimp-like krill."
+    },
+    {
+      "keywords": ["octopus", "octopuses"],
+      "answer": "Octopuses are highly intelligent sea creatures with eight arms and three hearts. They can change colour and texture to camouflage and can squeeze through any gap larger than their beak."
+    },
+    {
+      "keywords": ["bird", "birds", "eagle", "sparrow"],
+      "answer": "Birds are warm-blooded vertebrates with feathers, beaks, and (usually) the ability to fly. They evolved from dinosaurs and are found on every continent."
+    },
+    {
+      "keywords": ["penguin", "penguins"],
+      "answer": "Penguins are flightless birds that live in the southern hemisphere, especially Antarctica. They are excellent swimmers and huddle together to stay warm."
+    },
+    {
+      "keywords": ["bee", "bees", "honeybee"],
+      "answer": "Bees are flying insects that pollinate flowering plants. Honeybees live in colonies with a single queen and communicate the location of food by performing a 'waggle dance'."
+    }
+  ]
+}
